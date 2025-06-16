@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Life & Mind</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.0/lottie.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            height: 100vh;
+            background: linear-gradient(135deg, #f8f9fa, #e3f2fd);
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+            padding: 40px;
+        }
+
+        .left {
+            width: 55%;
+            padding-right: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-right: 2px solid #ddd;
+        }
+
+        .left h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .left p {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .quote {
+            margin-top: 40px;
+            font-style: italic;
+            font-size: 1.3rem;
+            color: #4a4a4a;
+            border-left: 4px solid #3f51b5;
+            padding-left: 16px;
+        }
+
+        .right {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            padding-left: 40px;
+        }
+
+        .feature-link {
+            text-decoration: none;
+            width: 100%;
+        }
+
+        .feature {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 25px 30px;
+            transition: transform 0.3s ease;
+            border-left: 6px solid #3f51b5;
+            color: inherit;
+        }
+
+        .feature:hover {
+            transform: scale(1.03);
+            background-color: #f0f4ff;
+        }
+
+        .feature h3 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            color: #3f51b5;
+        }
+
+        .feature p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        #lottie-container {
+            width: 280px;
+            height: 280px;
+            margin-bottom: 20px;
+        }
+
+
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .left,
+            .right {
+                width: 100%;
+                padding: 0;
+                border: none;
+            }
+
+            .left {
+                margin-bottom: 30px;
+            }
+
+            .feature-link {
+                width: 100%;
+            }
+
+            .feature {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <!-- Lottie animation -->
+            <div id="lottie-container"></div>
+            <h1>About</h1>
+            <p>
+                We believe that a balanced mind builds a better life. Our platform is dedicated to empowering
+                individuals by giving them tools to understand and care for their mental well-being. With a focus on
+                simplicity and clarity, we help bring awareness, positivity, and support to everyday mental health
+                journeys.
+            </p>
+            <div class="quote">
+                "Your mind is a powerful thing. When you fill it with positive thoughts, your life will start to
+                change."
+            </div>
+        </div>
+
+        <div class="right">
+            <a class="feature-link" href="https://mentalhealthapptechworkplace-c4ju88cfkgbhpyifyrxmbq.streamlit.app/"
+                target="_blank">
+                <div class="feature">
+                    <h3>🧠 Mental Health Assessment</h3>
+                    <p>Understand your emotional well-being through simple, science-backed assessments.</p>
+                </div>
+            </a>
+
+            <a class="feature-link" href="https://mentalhealthapp-nczgh6h8grrhgvczkgqrun.streamlit.app/"
+                target="_blank">
+                <div class="feature">
+                    <h3>🤝 Support Resources</h3>
+                    <p>Access tips, coping strategies, and professional help when you need it most.</p>
+                </div>
+            </a>
+
+            <a class="feature-link"
+                href="https://22783ddf-1728-4165-ae5e-9cb7496ddc9c-00-1das6upncwuaz.kirk.replit.dev/" target="_blank">
+                <div class="feature">
+                    <h3>📈 Mood Tracking</h3>
+                    <p>Track your daily mood patterns and receive insights to stay mentally fit.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        lottie.loadAnimation({
+            container: document.getElementById('lottie-container'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'assets/mind_lottie.json' // Make sure the file is here
+        });
+    </script>
+</body>
+
+</html>
