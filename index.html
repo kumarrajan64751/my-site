@@ -1,215 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Life & Mind</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.0/lottie.min.js"></script>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Life & Mind</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.0/lottie.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body, html {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, #f8f9fa, #e3f2fd);
-      color: #333;
-    }
+        body,
+        html {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #f8f9fa, #e3f2fd);
+            color: #333;
+        }
 
-    .container {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      padding: 40px;
-      gap: 30px;
-      min-height: 100vh;
-    }
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 40px;
+            gap: 30px;
+            min-height: 100vh;
+        }
 
-    .left, .right {
-      flex: 1 1 45%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
+        .left,
+        .right {
+            flex: 1 1 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
 
-    .left {
-      padding-right: 40px;
-      border-right: 2px solid #ddd;
-    }
+        .left {
+            padding-right: 40px;
+            border-right: 2px solid #ddd;
+        }
 
-    .left h1 {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
-      color: #2c3e50;
-    }
+        .left h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
 
-    .left p {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      color: #555;
-    }
+        .left p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #555;
+        }
 
-    .quote {
-      margin-top: 30px;
-      font-style: italic;
-      font-size: 1.2rem;
-      color: #4a4a4a;
-      border-left: 4px solid #3f51b5;
-      padding-left: 16px;
-    }
+        .quote {
+            margin-top: 30px;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #4a4a4a;
+            border-left: 4px solid #3f51b5;
+            padding-left: 16px;
+        }
 
-    #lottie-container {
-      width: 200px;
-      height: 200px;
-      margin: 30px 0;
-    }
+        #lottie-container {
+            width: 200px;
+            height: 200px;
+            margin: 30px 0;
+        }
 
-    .right {
-      padding-left: 40px;
-      gap: 20px;
-    }
+        .right {
+            padding-left: 40px;
+            gap: 20px;
+        }
 
-    .feature-link {
-      text-decoration: none;
-      width: 100%;
-    }
+        .feature-link {
+            text-decoration: none;
+            width: 100%;
+        }
 
-    .feature {
-      background: white;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      padding: 25px 30px;
-      transition: transform 0.3s ease;
-      border-left: 6px solid #3f51b5;
-      color: inherit;
-    }
+        .feature {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 25px 30px;
+            transition: transform 0.3s ease;
+            border-left: 6px solid #3f51b5;
+            color: inherit;
+        }
 
-    .feature:hover {
-      transform: scale(1.03);
-      background-color: #f0f4ff;
-    }
+        .feature:hover {
+            transform: scale(1.03);
+            background-color: #f0f4ff;
+        }
 
-    .feature h3 {
-      margin-bottom: 10px;
-      font-size: 1.5rem;
-      color: #3f51b5;
-    }
+        .feature h3 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            color: #3f51b5;
+        }
 
-    .feature p {
-      font-size: 1rem;
-      color: #666;
-    }
+        .feature p {
+            font-size: 1rem;
+            color: #666;
+        }
 
-    @media (max-width: 900px) {
-      .container {
-        flex-direction: column;
-        padding: 20px;
-        gap: 40px;
-      }
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column;
+                padding: 20px;
+                gap: 40px;
+            }
 
-      .left, .right {
-        flex: 1 1 100%;
-        padding: 0;
-        border: none;
-        text-align: center;
-        align-items: center;
-      }
+            .left,
+            .right {
+                flex: 1 1 100%;
+                padding: 0;
+                border: none;
+                text-align: center;
+                align-items: center;
+            }
 
-      .left h1 {
-        font-size: 2rem;
-      }
+            .left h1 {
+                font-size: 2rem;
+            }
 
-      .left p {
-        font-size: 1rem;
-        padding: 0 10px;
-      }
+            .left p {
+                font-size: 1rem;
+                padding: 0 10px;
+            }
 
-      .quote {
-        font-size: 1rem;
-        border-left: none;
-        border-top: 3px solid #3f51b5;
-        padding-left: 0;
-        padding-top: 10px;
-        max-width: 90%;
-      }
+            .quote {
+                font-size: 1rem;
+                border-left: none;
+                border-top: 3px solid #3f51b5;
+                padding-left: 0;
+                padding-top: 10px;
+                max-width: 90%;
+            }
 
-      #lottie-container {
-        width: 150px;
-        height: 150px;
-        margin: 20px auto;
-      }
+            #lottie-container {
+                width: 150px;
+                height: 150px;
+                margin: 20px auto;
+            }
 
-      .right {
-        gap: 20px;
-        padding-left: 0;
-        align-items: center;
-      }
+            .right {
+                gap: 20px;
+                padding-left: 0;
+                align-items: center;
+            }
 
-      .feature {
-        width: 100%;
-        max-width: 400px;
-      }
+            .feature {
+                width: 100%;
+                max-width: 400px;
+            }
 
-      .feature h3 {
-        font-size: 1.3rem;
-      }
+            .feature h3 {
+                font-size: 1.3rem;
+            }
 
-      .feature p {
-        font-size: 0.95rem;
-      }
-    }
-  </style>
+            .feature p {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <div class="container">
-    <div class="left">
-      <div id="lottie-container"></div>
-      <h1>About</h1>
-      <p>
-        We believe that a balanced mind builds a better life. Our platform is dedicated to empowering
-        individuals by giving them tools to understand and care for their mental well-being.
-      </p>
-      <div class="quote">
-        "Your mind is a powerful thing. When you fill it with positive thoughts, your life will start to change."
-      </div>
+    <div class="container">
+        <div class="left">
+            <div id="lottie-container"></div>
+            <h1>About</h1>
+            <p>
+                We believe that a balanced mind builds a better life. Our platform is dedicated to empowering
+                individuals by giving them tools to understand and care for their mental well-being.
+            </p>
+            <div class="quote">
+                "Your mind is a powerful thing. When you fill it with positive thoughts, your life will start to
+                change."
+            </div>
+        </div>
+
+        <div class="right">
+            <a class="feature-link" href="https://mentalhealthapptechworkplace-c4ju88cfkgbhpyifyrxmbq.streamlit.app/"
+                target="_blank">
+                <div class="feature">
+                    <h3>🧠NeuroLens Work</h3>
+                    <p>ML-based mental health prediction for working professionals.</p>
+                </div>
+            </a>
+
+            <a class="feature-link" href="https://mentalhealthapp-nczgh6h8grrhgvczkgqrun.streamlit.app/"
+                target="_blank">
+                <div class="feature">
+                    <h3>🧠NeuroLens Student</h3>
+                    <p>Tailored ML-based mental health prediction predictions for students. </p>
+                </div>
+            </a>
+
+            <a class="feature-link"
+                href="https://22783ddf-1728-4165-ae5e-9cb7496ddc9c-00-1das6upncwuaz.kirk.replit.dev/" target="_blank">
+                <div class="feature">
+                    <h3>📈 Mood Tracking</h3>
+                    <p>Track your daily mood patterns and receive insights to stay mentally fit.</p>
+                </div>
+            </a>
+        </div>
     </div>
 
-    <div class="right">
-      <a class="feature-link" href="https://mentalhealthapptechworkplace-c4ju88cfkgbhpyifyrxmbq.streamlit.app/" target="_blank">
-        <div class="feature">
-          <h3>🧠 Mental Health Assessment</h3>
-          <p>Understand your emotional well-being through simple, science-backed assessments.</p>
-        </div>
-      </a>
-
-      <a class="feature-link" href="https://mentalhealthapp-nczgh6h8grrhgvczkgqrun.streamlit.app/" target="_blank">
-        <div class="feature">
-          <h3>🤝 Support Resources</h3>
-          <p>Access tips, coping strategies, and professional help when you need it most.</p>
-        </div>
-      </a>
-
-      <a class="feature-link" href="https://22783ddf-1728-4165-ae5e-9cb7496ddc9c-00-1das6upncwuaz.kirk.replit.dev/" target="_blank">
-        <div class="feature">
-          <h3>📈 Mood Tracking</h3>
-          <p>Track your daily mood patterns and receive insights to stay mentally fit.</p>
-        </div>
-      </a>
-    </div>
-  </div>
-
-  <script>
-    lottie.loadAnimation({
-      container: document.getElementById('lottie-container'),
-      renderer: 'svg',
-      loop: true,
-      autoplay: true,
-      path: 'assets/mind_lottie.json'
-    });
-  </script>
+    <script>
+        lottie.loadAnimation({
+            container: document.getElementById('lottie-container'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'assets/mind_lottie.json'
+        });
+    </script>
 </body>
+
 </html>
